@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/UI/Navbar/Nav.astro";
+import OrderForm from "../../components/Order/OrderForm.svelte";
+import Footer from "../../components/UI/Footer.astro";
+import CategoriesTab from "../../components/CategoriesTab.svelte";
+import "dotenv/config";
+const item = Astro.cookies.get("ordereditem")?.json();
+---
+
+<Layout page="cart" title="Порачка">
+  <div class="mx-5">
+    <div class="sm:flex w-full">
+      <div class="sm:w-1/2 w-full justify-center flex">
+        <OrderForm client:idle env={import.meta.env.APP_TOKEN} items={item} />
+      </div>
+      <div class="sm:w-1/2 mt-20 sm:mt-0 w-full text-2xl sm:ml-20">
+        <h1 class="mb-16 text-4xl">Како функционира нарачувањето?</h1>
+        <p class="mb-5">- Внесете ги потребните податоци</p>
+        <p class="mb-5">- Потврдете ја нарачката</p>
+        <p class="mb-5">
+          - После потврдување на нарачката, добивате опција за следење на
+          истата, која ќе ви биде прикажана на горната страна од сајтот.
+        </p>
+        <p class="mb-5">
+          - Нарачките пристигнуваат по ELS брза пошта, 100% дискретно пакувани,
+          за 1-2 работни денови.
+        </p>
+        <p class="mb-5">
+          - Постои опција за достава до домашна адреса или до базата на ELS брза
+          пошта.
+        </p>
+        <p class="mb-5">
+          - За дополнителни прашања околу доставата, можете слободно да не
+          контактирате со порака на нашата Facebook страна, или на нашиот
+          телефонски број.
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>

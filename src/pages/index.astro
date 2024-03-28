@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/UI/Navbar/Nav.astro";
+import Carousel from "../components/UI/Carousel/Carousel.astro";
+import PocketBase from "pocketbase";
+import { type Product } from "../types";
+import CategoriesTab from "../components/CategoriesTab.svelte";
+import ItemsGrid from "../components/UI/ItemsGrid.svelte";
+import Footer from "../components/UI/Footer.astro";
+import "dotenv/config";
+
+const pb = new PocketBase("http://3.86.197.232:8080");
+
+const products = await pb.collection("products").getFullList({
+  headers: {
+    app_token: import.meta.env.APP_TOKEN,
+  },
+  filter: "front_page = true",
+  fields:
+    "id, product_name, product_image, is_highlighted, front_page, param, price, category",
+});
+
+let frontpageProducts: Product | any = products.filter(
+  (product) => product.front_page === true
+);
+---
+
+<Layout page="home" title="Секс шоп Ванила">
+  <div class="mx-5 2xl:mx-0">
+    <h2 class="text-white text-4xl font-medium">Жешки продукти</h2>
+    <Carousel />
+    <h2 class="text-white my-20 text-4xl font-medium">Истакнати продукти</h2>
+    <ItemsGrid client:load products={frontpageProducts} />
+  </div>
+</Layout>

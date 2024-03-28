@@ -1,0 +1,15 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SuccessScreen from "../../components/SuccessScreen.svelte";
+---
+
+<Layout title="Секс шоп ванила" page="cart">
+  <div class="mx-5">
+    <div class="w-full h-[50vh] flex justify-center items-center">
+      <div>
+        <h1 class="text-5xl mb-10">Порачката е успешно пратена!</h1>
+        <SuccessScreen client:idle />
+      </div>
+    </div>
+  </div>
+</Layout>

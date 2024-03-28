@@ -1,0 +1,35 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Nav from "../../../components/UI/Navbar/Nav.astro";
+import Footer from "../../../components/UI/Footer.astro";
+import CategoriesTab from "../../components/CategoriesTab.svelte";
+import ItemsGrid from "../../../components/UI/ItemsGrid.svelte";
+import { type Product } from "../../../types";
+import PocketBase from "pocketbase";
+import "dotenv/config";
+const param = Astro.params;
+const pb = new PocketBase("http://3.86.197.232:8080");
+
+const products: Product[] | any = await pb.collection("products").getFullList({
+  headers: {
+    app_token: import.meta.env.APP_TOKEN,
+  },
+  filter: `subcategory = "${param.param}"`,
+});
+---
+
+<Layout page="categories" title={"Секс шоп Ванила"}>
+  <div class="mx-5">
+    {
+      products && products.length != 0 ? (
+        <ItemsGrid client:idle products={products} />
+      ) : (
+        <div class="w-full flex justify-center">
+          <h1 class=" text-4xl ">
+            Моментално немаме продукти од оваа категорија во залиха
+          </h1>
+        </div>
+      )
+    }
+  </div>
+</Layout>

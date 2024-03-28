@@ -1,0 +1,41 @@
+---
+import Nav from '../components/UI/Navbar/Nav.astro';
+import CategoriesTab from '../components/CategoriesTab.svelte';
+import Footer from '../components/UI/Footer.astro';
+import icon from "../img/logo.jpg"
+interface Props {
+	title: string;
+	page: string
+}
+
+const { title, page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href={icon as any} >
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-black flex flex-col min-h-screen  text-[#fefefe]">
+  <nav>
+    <Nav page={page} />
+  </nav>
+  <main class="w-full flex">
+    <div class="w-full mb-44 mt-[112px] h-full flex">
+      <CategoriesTab client:idle/>
+      <div class="mt-20 w-full mx-0 2xl:mx-20">
+		    <slot/>
+      </div>
+    </div>
+  </main>
+
+  <footer class="2xl:ml-64 mt-auto">
+    <Footer />
+  </footer>
+	</body>
+</html>

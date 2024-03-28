@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/UI/Navbar/Nav.astro";
+import CartItem from "../components/Cart/CartItem.svelte";
+import CategoriesTab from "../components/CategoriesTab.svelte";
+import Footer from "../components/UI/Footer.astro";
+const products: any = Astro.cookies.get("cartitems")?.json();
+---
+
+<Layout page="cart" title="Корпа">
+  <div class="mx-0 md:mx-5">
+    {
+      products && products.length != 0 ? (
+        <>
+          <h1 class=" text-4xl ">Продукти во корпа:</h1>
+          <div class=" mt-20">
+            <CartItem client:idle products={products} />
+          </div>
+        </>
+      ) : (
+        <div class="w-full flex justify-center">
+          <h1 class=" md:mx-5 text-4xl ">Немате ништо во корпа</h1>
+        </div>
+      )
+    }
+  </div>
+</Layout>

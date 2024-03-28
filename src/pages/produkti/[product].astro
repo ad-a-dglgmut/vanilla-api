@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { type Product } from "../../types";
+import Button from "../../components/UI/Button.svelte";
+import ItemDescription from "../../components/ItemDescription.svelte";
+import PocketBase from "pocketbase";
+import "dotenv/config";
+const pb = new PocketBase("http://3.86.197.232:8080");
+const product = Astro.params;
+
+const name = Astro.cookies.get("item");
+const itemRequest: Product[] = await pb.collection("products").getFullList({
+  headers: {
+    app_token: import.meta.env.APP_TOKEN,
+  },
+  filter: `product_name = '${name?.value}'`,
+});
+const item: Product = itemRequest[0];
+---
+
+<Layout page="home" title={item.product_name as string}>
+  <div class="mx-5 2xl:mx-0">
+    <div class="w-full flex justify-center">
+      <div class="border border-white rounded-3xl w-full">
+        <img
+          src={`http://3.86.197.232:8080/api/files/products/${item.id}/${item.product_image}`}
+          alt=""
+          class="mx-auto h-[500px] object-contain"
+        />
+      </div>
+    </div>
+    <h1 class="mt-16 text-4xl font-semibold">{item.product_name}</h1>
+    <div class="mt-10">
+      <ItemDescription content={item.description} />
+    </div>
+    <p class="mt-5 text-2xl">
+      {item.price} ден.
+    </p>
+    <div class="mt-5">
+      <Button
+        client:load
+        buttonText={"Додади во кошничка"}
+        product={item}
+        isHomePage={false}
+      />
+    </div>
+  </div>
+</Layout>

@@ -11,7 +11,7 @@
 {#each items as item}
   <div class="hidden h-[600px] bg-black duration-700" data-carousel-item>
     <img
-      src={`http://3.86.197.232:8080/api/files/carousel_products/${item.id}/${item.image}`}
+      src={`https://pocketbase-0-21-3-linux-amd64222.fly.dev/api/files/carousel_products/${item.id}/${item.image}`}
       class="relative object-cover bg-black z-30 h-[600px] block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
       alt="..."
     />
@@ -26,7 +26,7 @@
       </div>
     </div>
     <img
-      src={`http://3.86.197.232:8080/api/files/carousel_products/${item.id}/${item.product_image}`}
+      src={`https://pocketbase-0-21-3-linux-amd64222.fly.dev/api/files/carousel_products/${item.id}/${item.product_image}`}
       alt=""
       class="absolute z-40 bottom-20 left-2 object-contain h-64"
     />

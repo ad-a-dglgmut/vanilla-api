@@ -5,7 +5,7 @@ import Button from "../../components/UI/Button.svelte";
 import ItemDescription from "../../components/ItemDescription.svelte";
 import PocketBase from "pocketbase";
 import "dotenv/config";
-const pb = new PocketBase("http://3.86.197.232:8080");
+const pb = new PocketBase("https://pocketbase-0-21-3-linux-amd64222.fly.dev");
 const product = Astro.params;
 
 const name = Astro.cookies.get("item");
@@ -23,7 +23,7 @@ const item: Product = itemRequest[0];
     <div class="w-full flex justify-center">
       <div class="border border-white rounded-3xl w-full">
         <img
-          src={`http://3.86.197.232:8080/api/files/products/${item.id}/${item.product_image}`}
+          src={`https://pocketbase-0-21-3-linux-amd64222.fly.dev/api/files/products/${item.id}/${item.product_image}`}
           alt=""
           class="mx-auto h-[500px] object-contain"
         />

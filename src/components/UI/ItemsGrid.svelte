@@ -19,7 +19,7 @@
     <div class="w-full flex-col border border-white">
       <img
         class=" h-72 mx-auto object-cover"
-        src={`http://3.86.197.232:8080/api/files/products/${product.id}/${product.product_image}`}
+        src={`https://pocketbase-0-21-3-linux-amd64222.fly.dev/api/files/products/${product.id}/${product.product_image}`}
         alt=""
       />
       <div class="w-full border-t border-white my-3">

@@ -2,7 +2,7 @@
 import CarouselItems from "./CarouselItems.svelte";
 import PocketBase from "pocketbase";
 import "dotenv/config";
-const pb = new PocketBase("http://3.86.197.232:8080");
+const pb = new PocketBase("https://pocketbase-0-21-3-linux-amd64222.fly.dev");
 
 const carouselProducts:any = await pb.collection("carousel_products").getFullList({
   headers: {

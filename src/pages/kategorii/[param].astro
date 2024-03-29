@@ -8,7 +8,7 @@ import { type Product } from "../../types";
 import PocketBase from "pocketbase";
 import "dotenv/config";
 const param = Astro.params;
-const pb = new PocketBase("https://vanilla-api-skyw.onrender.com");
+const pb = new PocketBase("https://vanilla-ap.pockethost.io");
 
 const products: Product[] | any = await pb.collection("products").getFullList({
   headers: {

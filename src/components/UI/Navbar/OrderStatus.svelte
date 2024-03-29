@@ -3,7 +3,7 @@
   import { orderStatus } from "../../../globalState";
   import CartItem from "../../Cart/CartItem.svelte";
   import { onMount } from "svelte";
-  const pb = new PocketBase("https://vanilla-api-skyw.onrender.com");
+  const pb = new PocketBase("https://vanilla-ap.pockethost.io");
   let order:
     | {
         name: String;

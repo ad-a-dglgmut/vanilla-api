@@ -19,7 +19,7 @@
     <div class="w-full flex-col border border-white">
       <img
         class=" h-72 mx-auto object-cover"
-        src={`https://vanilla-api-skyw.onrender.com/api/files/products/${product.id}/${product.product_image}`}
+        src={`https://vanilla-ap.pockethost.io/api/files/products/${product.id}/${product.product_image}`}
         alt=""
       />
       <div class="w-full border-t border-white my-3">

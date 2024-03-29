@@ -2,7 +2,7 @@
 import CarouselItems from "./CarouselItems.svelte";
 import PocketBase from "pocketbase";
 import "dotenv/config";
-const pb = new PocketBase("https://vanilla-api-skyw.onrender.com");
+const pb = new PocketBase("https://vanilla-ap.pockethost.io");
 
 const carouselProducts:any = await pb.collection("carousel_products").getFullList({
   headers: {

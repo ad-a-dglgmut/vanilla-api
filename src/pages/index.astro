@@ -9,7 +9,7 @@ import ItemsGrid from "../components/UI/ItemsGrid.svelte";
 import Footer from "../components/UI/Footer.astro";
 import "dotenv/config";
 
-const pb = new PocketBase("https://vanilla-api-skyw.onrender.com");
+const pb = new PocketBase("https://vanilla-ap.pockethost.io");
 
 const products = await pb.collection("products").getFullList({
   headers: {

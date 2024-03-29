@@ -51,7 +51,7 @@
     >
       <div class="flex mb-5 md:mb-0 w-full items-center">
         <img
-          src={`https://vanilla-api-skyw.onrender.com/api/files/products/${product.id}/${product.product_image}`}
+          src={`https://vanilla-ap.pockethost.io/api/files/products/${product.id}/${product.product_image}`}
           class="max-h-[160px] w-32 object-contain"
           alt=""
         />

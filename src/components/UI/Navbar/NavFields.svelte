@@ -46,13 +46,13 @@
   <li>
     {#if page === "home"}
       <a
-        href="/"
+        href="https://sexshopvanilla.com/"
         class="block text-xl font-semibold py-2 px-3 text-[#f236be] rounded hover:bg-transparent md:border-0 md:p-0"
         aria-current="page">Дома</a
       >
     {:else}
       <a
-        href="/"
+        href="https://sexshopvanilla.com/"
         class="block text-xl font-semibold py-2 px-3 text-[#fefefe] rounded hover:bg-transparent md:border-0 hover:text-[#f236be] md:p-0"
         aria-current="page">Дома</a
       >
@@ -80,7 +80,7 @@
               {#each subcategories as subcategory}
                 <DropdownItem class="hover:bg-[#5a0051]">
                   <a
-                    href={`sexshopvanilla.com/kategorii/kozmetika-i-preparati/${subcategory.param}`}
+                    href={`https://sexshopvanilla.com/kategorii/kozmetika-i-preparati/${subcategory.param}`}
                   >
                     <div class="w-full h-full">
                       {subcategory.name}
@@ -91,7 +91,7 @@
             </Dropdown>
           {:else}
             <DropdownItem class=" hover:bg-[#5a0051]">
-              <a href={`sexshopvanilla.com/kategorii/${category.param}`}>
+              <a href={`https://sexshopvanilla.com/kategorii/${category.param}`}>
                 <div class="w-full h-full">
                   {category.name}
                 </div>
@@ -121,7 +121,7 @@
               {#each subcategories as subcategory}
                 <DropdownItem class="hover:bg-[#5a0051]">
                   <a
-                    href={`sexshopvanilla.com/kategorii/kozmetika-i-preparati/${subcategory.param}`}
+                    href={`https://sexshopvanilla.com/kategorii/kozmetika-i-preparati/${subcategory.param}`}
                   >
                     <div class="w-full h-full">
                       {subcategory.name}
@@ -132,7 +132,7 @@
             </Dropdown>
           {:else}
             <DropdownItem class=" hover:bg-[#5a0051]">
-              <a href={`sexshopvanilla.com/kategorii/${category.param}`}>
+              <a href={`https://sexshopvanilla.com/kategorii/${category.param}`}>
                 <div class="w-full h-full">
                   {category.name}
                 </div>
@@ -146,13 +146,13 @@
   <li>
     {#if page === "prikazni"}
       <a
-        href="/prikazni"
+        href="https://sexshopvanilla.com/prikazni"
         class="block text-xl font-semibold py-2 px-3 text-[#f236be] rounded hover:bg-transparent md:border-0 md:p-0"
         aria-current="page">Приказни</a
       >
     {:else}
       <a
-        href="/prikazni"
+        href="https://sexshopvanilla.com/prikazni"
         class="block text-xl font-semibold py-2 px-3 text-[#fefefe] rounded hover:bg-transparent md:border-0 hover:text-[#f236be] md:p-0"
         aria-current="page">Приказни</a
       >
@@ -161,13 +161,13 @@
   <li>
     {#if page === "zanas"}
       <a
-        href="/za-nas"
+        href="https://sexshopvanilla.com/za-nas"
         class="block text-xl font-semibold py-2 px-3 text-[#f236be] rounded hover:bg-transparent md:border-0 md:p-0"
         aria-current="page">За нас</a
       >
     {:else}
       <a
-        href="/za-nas"
+        href="https://sexshopvanilla.com/za-nas"
         class="block text-xl font-semibold py-2 px-3 text-[#fefefe] rounded hover:bg-transparent md:border-0 hover:text-[#f236be] md:p-0"
         aria-current="page">За нас</a
       >
@@ -175,7 +175,7 @@
   </li>
   <li>
     {#if page === "cart"}
-      <a href="/korpa">
+      <a href="https://sexshopvanilla.com/korpa">
         <div>
           <svg
             class=" w-14 h-14 text-[#f236be] hover:text-[#f236be] hover:bg-transparent"
@@ -195,7 +195,7 @@
         </div>
       </a>
     {:else}
-      <a href="/korpa">
+      <a href="https://sexshopvanilla.com/korpa">
         <div class="relative w-fit">
           <svg
             class=" w-14 h-14 text-[#fefefe] hover:text-[#f236be] hover:bg-transparent"

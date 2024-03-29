@@ -40,7 +40,7 @@
   <div class=" mt-14">
     {#each categories as g}
       {#if g.param !== "kozmetika-i-preparati"}
-        <a href={`sexshopvanilla.com/kategorii/${g.param}`}>
+        <a href={`https://sexshopvanilla.com/kategorii/${g.param}`}>
           <div
             class="w-full pl-5 pr-5 flex h-20 text-xl hover:bg-[#360030] items-center"
           >
@@ -48,7 +48,7 @@
           </div>
         </a>
       {:else if g.param === "popust"}
-        <a href={`sexshopvanilla.com/kategorii/popust`}>
+        <a href={`https://sexshopvanilla.com/kategorii/popust`}>
           <div
             class="w-full pl-5 pr-5 flex h-20 text-xl hover:bg-[#360030] items-center"
           >
@@ -67,7 +67,7 @@
           <div>
             {#each subcategories as s}
               <a
-                href={`sexshopvanilla.com/kategorii/kozmetika-i-preparati/${s.param}`}
+                href={`https://sexshopvanilla.com/kategorii/kozmetika-i-preparati/${s.param}`}
               >
                 <div
                   class="w-full pl-5 pr-5 flex min-h-20 text-xl hover:bg-[#5a0051] bg-[#360030] items-center"

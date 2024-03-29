@@ -51,7 +51,7 @@
     >
       <div class="flex mb-5 md:mb-0 w-full items-center">
         <img
-          src={`https://pocketbase-0-21-3-linux-amd64222.fly.dev/api/files/products/${product.id}/${product.product_image}`}
+          src={`https://vanilla-api-skyw.onrender.com/api/files/products/${product.id}/${product.product_image}`}
           class="max-h-[160px] w-32 object-contain"
           alt=""
         />

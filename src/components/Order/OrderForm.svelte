@@ -6,7 +6,7 @@
   import emailjs from "@emailjs/browser";
   import { generateID } from "../../generateId";
   export let items: CartItem[];
-  const pb = new PocketBase("https://pocketbase-0-21-3-linux-amd64222.fly.dev");
+  const pb = new PocketBase("https://vanilla-api-skyw.onrender.com");
   export let env: any;
   let alertIsOpen: boolean = false;
   let errorAlertIsOpen: boolean = false;
